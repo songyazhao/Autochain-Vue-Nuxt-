@@ -1,0 +1,56 @@
+@import './_const.styl';
+
+animated() {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+// 放大动画
+.pulse {
+  animated();
+  animation-name: pulse;
+}
+
+// 心跳动画(有规律的连续放大缩小)
+.skip {
+  &:before {
+    animated();
+    animation-name: skip;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes skip {
+  from {
+    color: white;
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    color: main-color;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    color: white;
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,67 @@
+@import './_const.styl';
+
+initSize() {
+  width: 976px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1378px) {
+    width: 900px;
+  }
+  @media only screen and (max-width: 1200px) {
+    width: 800px;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+// 图片居中
+imgMiddle() {
+  &:before {
+    content: "center";
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+  img {
+    vertical-align: middle;
+  }
+}
+
+// 在某元素前绘制圆点
+solidDot(color = black, w = 8px, h = w) {
+  display flex;
+  align-items center;
+  &:before {
+    content '';
+    display inline-block;
+    width w;
+    height h;
+    border-radius 50%;
+    background-color color;
+  }
+}
+
+transitionBig(s = 1.1) {
+  transform: scale(1);
+  transition: all .45s ease-in-out;
+
+  &:hover {
+    transform: scale(s);
+    transition: all .45s ease-out;
+  }
+}
+
+transitionBeforeBig(s = 1.05) {
+  &:before {
+    transform: scale(1);
+    transition: all .45s ease-in-out;
+  }
+
+  &:hover:before {
+    color: main-color;
+    transform: scale(s);
+    transition: all .45s ease-out;
+  }
+}
