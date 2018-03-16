@@ -18,7 +18,9 @@ p {
   line-height: inherit;
 }
 
-html, body, .container {
+html,
+body,
+.container {
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -175,6 +177,48 @@ header {
     background-position-y: 74px;
     &-con {
       padding-top: 38px;
+      padding-bottom: 8px;
+
+      &__video {
+        top: 30%;
+      }
+      &__buttons {
+        margin-top: 8px;
+        ul {
+          min-width: 60px;
+          margin: 0 30px;
+
+          .icon,
+          .text {
+            line-height: 24px;
+          }
+
+          .icon {
+            width: 12px;
+          }
+
+          .text {
+            font-size: 9px;
+          }
+
+          [class^='circle-'] {
+            width: 35px;
+
+            &.circle-left {
+              left: -35px;
+            }
+
+            &.circle-right {
+              right: -35px;
+            }
+
+            &::before {
+              width: 70px;
+              border-radius: 47%;
+            }
+          }
+        }
+      }
     }
     &-con__icon {
       width: 30%;
@@ -184,8 +228,7 @@ header {
     &-con__text {
       width: 80%;
       margin-top: 22px;
-      padding: 8px 24px;
-      // p {
+      padding: 8px 24px; // p {
       //   text-align: center;
       // }
     }

@@ -17,15 +17,16 @@ Description 基于Vue + Nuxt开发的静态站点
 </template>
 
 <script>
-import Header from '~/components/Header'
-import Home from '~/components/Home.vue'
-import BusinessModel from '~/components/BusinessModel'
-import TechnologySuperiority from '~/components/TechnologySuperiority'
-import Token from '~/components/Token'
-import TeamIntroduction from '~/components/TeamIntroduction'
-import Footer from '~/components/Footer'
+import Header from './components/Header'
+import Home from './components/Home.vue'
+import BusinessModel from './components/BusinessModel'
+import TechnologySuperiority from './components/TechnologySuperiority'
+import Token from './components/Token'
+import TeamIntroduction from './components/TeamIntroduction'
+import Footer from './components/Footer'
 import Vue from 'vue'
 import VueScrollTo from 'vue-scrollto'
+import { mapState } from 'vuex'
 
 Vue.use(VueScrollTo)
 
@@ -40,12 +41,22 @@ export default {
     Footer
   },
 
+  computed: {
+    ...mapState(['locale'])
+  },
+
   mounted() {
     this.init()
   },
 
   methods: {
     init() {
+      const localLang = (navigator.language || navigator.browserLanguage).toLowerCase()
+      // 根据系统语言设置默认语言
+      if (localLang !== this.locale && this.$route.query.unsight !== 'yes') {
+        return this.$router.replace(`/${localLang}`)
+      }
+
       if (this.isMobile()) {
         import('~/styles/mobile.styl')
         if (this.isIOS()) {

@@ -8,6 +8,7 @@ animated() {
 .infinite {
   animation-iteration-count: infinite;
 }
+
 // 放大动画
 .pulse {
   animated();
@@ -52,5 +53,25 @@ animated() {
   to {
     color: white;
     transform: scale3d(1, 1, 1);
+  }
+}
+
+.fade-enter-active {
+  animation: fadeIn .35s ease;
+}
+
+.fade-leave-active {
+  animation: fadeIn .25s reverse ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
   }
 }

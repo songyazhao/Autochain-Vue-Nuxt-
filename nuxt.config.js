@@ -20,11 +20,15 @@ module.exports = {
   router: {
     middleware: 'i18n'
   },
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js',
+    { src: '~/plugins/video-player.js', ssr: false }
+  ],
   generate: {
     routes: ['/', '/zh-cn', '/en', '/zh-hant']
   },
   css: [
+    'video.js/dist/video-js.css',
     'normalize.css',
     { src: '~/styles/animate.styl', lang: 'stylus' },
     { src: '~/styles/scrollbar.styl', lang: 'stylus' },
