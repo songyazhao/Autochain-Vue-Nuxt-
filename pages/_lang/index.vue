@@ -51,7 +51,13 @@ export default {
 
   methods: {
     init() {
-      const localLang = (navigator.language || navigator.browserLanguage).toLowerCase()
+      let localLang = (navigator.language || navigator.browserLanguage).toLowerCase()
+
+      // 国外
+      if (this.$store.state.locales.indexOf(localLang) === -1) {
+        localLang = 'en'
+      }
+
       // 根据系统语言设置默认语言
       if (localLang !== this.locale && this.$route.query.unsight !== 'yes') {
         return this.$router.replace(`/${localLang}`)
