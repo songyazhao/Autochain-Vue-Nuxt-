@@ -9,34 +9,12 @@ animated() {
   animation-iteration-count: infinite;
 }
 
-// 放大动画
-.pulse {
-  animated();
-  animation-name: pulse;
-}
-
 // 心跳动画(有规律的连续放大缩小)
 .skip {
-  &:before {
-    animated();
-    animation-name: skip;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-  }
-}
-
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+  animation-duration: 3s;
+  animation-name: skip;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
 }
 
 @keyframes skip {
@@ -47,31 +25,11 @@ animated() {
 
   50% {
     color: main-color;
-    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.15, 1.15, 1.15);
   }
 
   to {
     color: white;
     transform: scale3d(1, 1, 1);
-  }
-}
-
-.fade-enter-active {
-  animation: fadeIn .35s ease;
-}
-
-.fade-leave-active {
-  animation: fadeIn .25s reverse ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0)
-  }
-
-  to {
-    opacity: 1;
-    transform: none
   }
 }

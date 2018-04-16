@@ -1,37 +1,31 @@
 @import './_const.styl';
 
 initSize() {
-  width: 976px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  @media only screen and (max-width: 1378px) {
+  @media (max-width: 1440px) {
+    width: 976px;
+  }
+  @media (max-width: 1378px) {
     width: 900px;
   }
-  @media only screen and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 800px;
   }
-  @media only screen and (max-width: 600px) {
-    width: 100%;
+  @media (max-width: 1024px) {
+    width: 650px;
   }
-}
-
-// 图片居中
-imgMiddle() {
-  &:before {
-    content: "center";
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: middle;
-    width: 0;
-    height: 100%;
+  @media (max-width: 900px) {
+    width: 550px;
   }
-  img {
-    vertical-align: middle;
+  @media (max-width: 767px) {
+    width: 94%;
   }
 }
 
 // 在某元素前绘制圆点
-solidDot(color = black, w = 8px, h = w) {
+solidDot(color=black, w=8px, h=w) {
   display flex;
   align-items center;
   &:before {
@@ -44,17 +38,7 @@ solidDot(color = black, w = 8px, h = w) {
   }
 }
 
-transitionBig(s = 1.1) {
-  transform: scale(1);
-  transition: all .45s ease-in-out;
-
-  &:hover {
-    transform: scale(s);
-    transition: all .45s ease-out;
-  }
-}
-
-transitionBeforeBig(s = 1.05) {
+transitionBeforeBig(s=1.05) {
   &:before {
     transform: scale(1);
     transition: all .45s ease-in-out;
@@ -64,5 +48,16 @@ transitionBeforeBig(s = 1.05) {
     color: main-color;
     transform: scale(s);
     transition: all .45s ease-out;
+  }
+}
+
+afterLine(w = 100%, mt = 8px) {
+  &::after {
+    content: "";
+    display: block;
+    width: w;
+    height: 4px;
+    background-color: main-color;
+    margin-top: mt;
   }
 }

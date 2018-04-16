@@ -1,60 +1,53 @@
 <style lang="stylus">
-.video-player {
-  overflow: hidden;
-
-  &-box {
-    position: relative;
-    top: 50%;
+.video-js {
+  .vjs-big-play-button {
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    margin-left: -1.5em;
+    margin-top: -1.5em;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 50%;
+    border: none;
+
+    .vjs-icon-placeholder:before {
+      transform: scale(2.35);
+    }
   }
 
-  &-close {
-    position: absolute !important;
-    top: 8px;
-    right: 8px;
-    z-index: 10;
+  .vjs-tech {
+    border-radius: 8px;
   }
-}
-
-.video-js .vjs-big-play-button {
-  left: 50%;
-  top: 50%;
-  margin-left: -45px;
-  margin-top: -22.5px;
 }
 </style>
 
 <template>
   <div class="video-player">
-    <section class="video-player-box">
-      <IconClose class="video-player-close" @click.native="$emit('input', false)"/>
-      <div
-        playsinline
-        @play="onPlayerPlay($event)"
-        @pause="onPlayerPause($event)"
-        @ended="onPlayerEnded($event)"
-        @loadeddata="onPlayerLoadeddata($event)"
-        @waiting="onPlayerWaiting($event)"
-        @playing="onPlayerPlaying($event)"
-        @timeupdate="onPlayerTimeupdate($event)"
-        @canplay="onPlayerCanplay($event)"
-        @canplaythrough="onPlayerCanplaythrough($event)"
-        @ready="playerReadied"
-        @statechanged="playerStateChanged($event)"
-        v-video-player:myVideoPlayer="playerOptions">
-      </div>
-    </section>
+    <div
+      class="video-player-box"
+      playsinline
+      @play="onPlayerPlay($event)"
+      @pause="onPlayerPause($event)"
+      @ended="onPlayerEnded($event)"
+      @loadeddata="onPlayerLoadeddata($event)"
+      @waiting="onPlayerWaiting($event)"
+      @playing="onPlayerPlaying($event)"
+      @timeupdate="onPlayerTimeupdate($event)"
+      @canplay="onPlayerCanplay($event)"
+      @canplaythrough="onPlayerCanplaythrough($event)"
+      @ready="playerReadied"
+      @statechanged="playerStateChanged($event)"
+      v-video-player:myVideoPlayer="playerOptions">
+    </div>
   </div>
 </template>
 
 <script>
-import IconClose from '~/components/Icon/Close'
 
 export default {
   name: 'VideoPlayer',
   props: ['value'],
-  components: { IconClose },
   data() {
     return {
       show: this.value,

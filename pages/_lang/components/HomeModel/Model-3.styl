@@ -1,0 +1,126 @@
+@import '../../../../styles/_const.styl';
+@import '../../../../styles/_util.styl';
+
+.home-model3 {
+  h3 {
+    color: main-color;
+  }
+
+  &>p {
+    margin-top: 2.5em;
+  }
+
+  &-autochain {
+    width: w=21em;
+    height: ceil(w * 0.885);
+    margin: 8em auto 0;
+    background: url('../../../../assets/组41@2x.png') no-repeat;
+    background-size: 100%;
+    position: relative;
+    text-align: center;
+    transitionBeforeBig();
+
+    &:before {
+      content: attr(inner-text);
+      display: inline-block;
+      width: 7em;
+      text-align: center;
+      font-size: 2rem;
+      word-break: keep-all;
+      margin-top: 35%;
+      line-height: 38px;
+    }
+
+    [class^='text-'] {
+      position: absolute;
+      font-size: .7em;
+      width: outer-size = 84px;
+      height: outer-size;
+      inner-size = 72px;
+
+      .inner {
+        transform: translateY(-50%);
+        margin-top: 50%;
+      }
+
+      .circle,
+      .circle::after {
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+
+      .circle {
+        width: inner-size;
+        height: inner-size;
+        border: 3px solid rgb(130, 130, 130);
+        margin-top: -(inner-size/2);
+        margin-left: -(inner-size/2);
+
+        &::after {
+          content: '';
+          display: block;
+          width: outer-size;
+          height: outer-size;
+          border: 6px solid rgba(75, 75, 75, .85);
+          margin-top: -(outer-size/2);
+          margin-left: -(outer-size/2);
+        }
+      }
+    }
+
+    vertical-offset=-5em;
+    horizontal-offset=-8em;
+    .text-1,
+    .text-2 {
+      top: vertical-offset;
+    }
+
+    .text-1,
+    .text-3 {
+      left: horizontal-offset;
+    }
+
+    .text-2,
+    .text-4 {
+      right: horizontal-offset;
+    }
+
+    .text-3,
+    .text-4 {
+      bottom: vertical-offset + 1em;
+    }
+  }
+}
+
+.en {
+  .home-model3 {
+    vertical-offset=-7em;
+    horizontal-offset=-10em;
+    &-autochain {
+      [class^='text-'] {
+        font-size: .525em;
+      }
+      .text-1,
+      .text-2 {
+        top: vertical-offset;
+      }
+
+      .text-1,
+      .text-3 {
+        left: horizontal-offset;
+      }
+
+      .text-2,
+      .text-4 {
+        right: horizontal-offset;
+      }
+
+      .text-3,
+      .text-4 {
+        bottom: vertical-offset + 1em;
+      }
+    }
+  }
+}

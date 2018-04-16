@@ -1,0 +1,111 @@
+@import '../../../../styles/_const.styl';
+@import '../../../../styles/_util.styl';
+
+.home-model2 {
+  initSize();
+
+  &-con {
+    h=2px;
+    c=white;
+    margin-top: 3em;
+    border-right: h solid c;
+    position: relative;
+
+    .line {
+      position: absolute;
+      right: 0;
+      height: h;
+      width: 40%;
+      background: c;
+
+      &-prefix {
+        top: 0;
+      }
+
+      &-suffix {
+        width: 65%;
+        bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        margin-top: calc(-0.5em + 1px);
+        width: 1em;
+        height: 1em;
+        background: main-color;
+      }
+    }
+
+    &>p {
+      border-bottom: 1px solid white;
+      width: 56%;
+      padding-top: 2em;
+      afterLine(3.45em);
+    }
+
+    li {
+      text-align: center;
+    }
+
+    .step,
+    .year {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .step {
+      margin-top: 5em;
+      color: main-color;
+
+      .text {
+        width: 132px;
+        position: relative;
+        z-index: 999;
+      }
+
+    }
+    .year {
+      position: relative;
+      top: -1.35em;
+
+      li {
+        line-height: 6em;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/v2/箭头.png');
+        background-position: center top;
+        background-size: auto 23px;
+        position: relative;
+
+        &:nth-child(1) {
+          flex: 2;
+          transform: translateX(1.3em);
+        }
+
+        &:nth-child(2) {
+          flex: 1;
+          transform: translateX(-.45em);
+        }
+
+        &:nth-child(3) {
+          flex: 2;
+        }
+      }
+    }
+  }
+}
+
+.en {
+  .home-module2 {
+    .step {
+      li:nth-child(1) .text {
+        top: 30%;
+      }
+
+      li:nth-child(3) .text {
+        top: 20%;
+      }
+    }
+  }
+}

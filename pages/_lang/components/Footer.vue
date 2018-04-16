@@ -2,9 +2,7 @@
 @import '../../../styles/_const.styl';
 
 footer {
-  width: 100%;
-  min-width: 1200px;
-  background: blackback;
+  background: black;
   position: relative;
 }
 
@@ -27,7 +25,14 @@ footer {
   .copy {
     font-size: 12px;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 36px;
+
+    .email {
+      background: url('../../../assets/v2/email.png') no-repeat left center;
+      background-size: auto 90%;
+      padding-left: 1.6em;
+      padding-bottom: 2px;
+    }
   }
 
   .contact {
@@ -102,7 +107,11 @@ footer {
       <div class="logo">
         <img src="../../../assets/logo@2x.png" alt="车信链">
       </div>
-      <p class="copy">Copyright &copy; 2018 autochain.cc  |  All rights reserved</p>
+      <p class="copy">
+        <span class="email">service@autochain.cc</span>
+        <br/>
+        Copyright &copy; 2018 autochain.cc  |  All rights reserved
+      </p>
       <ul class="contact">
         <li class="wechat" :name="$t('footer.wechat')">
           <img class="qrcode" src="../../../assets/qrcode-wechat.png">

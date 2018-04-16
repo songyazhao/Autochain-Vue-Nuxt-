@@ -22,7 +22,8 @@ module.exports = {
   },
   plugins: [
     '~/plugins/i18n.js',
-    { src: '~/plugins/video-player.js', ssr: false }
+    { src: '~/plugins/video-player.js', ssr: false },
+    { src: '~/plugins/vue-scroll-reveal', ssr: false }
   ],
   generate: {
     routes: ['/', '/zh-cn', '/en', '/zh-hant']
@@ -38,7 +39,13 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['vue-i18n', 'js-cookie'],
+    vendor: [
+      'vue-i18n',
+      'vue-scroll-reveal',
+      '~/locales/en',
+      '~/locales/zh-cn',
+      '~/locales/zh-hant'
+    ],
     /*
      ** Run ESLint on save
      */
@@ -54,7 +61,7 @@ module.exports = {
     },
     postcss: [
       require('autoprefixer')({
-        browsers: ["> 1%", "last 2 versions", "not ie <= 8"]
+        browsers: ['> 1%', 'last 2 versions', 'not ie <= 8']
       })
     ]
   }

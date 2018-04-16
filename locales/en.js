@@ -13,7 +13,7 @@ module.exports = {
     },
     buttons: {
       one: 'WATCH VIDEO',
-      two: '白皮书下载'
+      two: 'Whitepaper Download'
     },
     desc: {
       title1: 'Assimilating vehicle data into the chain',
@@ -23,24 +23,24 @@ module.exports = {
     },
     step: {
       label: {
-        a: 'Automobile manufacturer',
+        a: 'Automobile<br/>manufacturer',
         b: '4s stores',
-        c: 'Automobile after-sales market',
-        d: 'Car disassembly',
+        c: 'Automobile<br/>after-sales<br/>market',
+        d: 'Car<br/>disassembly',
       },
       year: {
-        a: '0年',
-        b: '3年',
-        c: '10年'
+        a: '0 year',
+        b: '3 years',
+        c: '10 years'
       }
     },
     autochain: {
       innerText: 'AUTOCHAIN 车信链',
       tag: {
-        a: 'Block chain',
-        b: 'Cloud computing',
+        a: 'Block<br/>chain',
+        b: 'Cloud<br/>computing',
         c: 'AI',
-        d: 'Intelligent hardware'
+        d: 'Intelligent<br/>hardware'
       }
     }
   },
@@ -50,26 +50,26 @@ module.exports = {
     desc: 'A complete business model based on AUTOCHAIN',
     polygon: {
       a: 'Block chain',
-      b: 'Vehicle intelligence',
-      c: 'After-sales vehicle repair and maintenance',
+      b: 'Vehicle<br/>intelligence',
+      c: 'After-sales<br/>vehicle repair and<br/>maintenance',
       d: 'Auto finance',
       e: 'Used car trading',
-      f: 'Intelligent hardware',
+      f: 'Intelligent<br/>hardware',
       g: 'AI',
-      h: 'Cloud computing',
+      h: 'Cloud<br/>computing',
     }
   },
   TS: { // TechnologySuperiority 的首字母缩写
     title: 'Technology and advantages',
     switch: {
       titles: {
-        a: 'Technical framework',
-        b: 'Basic technology',
-        c: 'Technical realization'
+        a: 'Basic<br/>technology',
+        b: 'Technical<br/>framework',
+        c: 'Technical<br/>realization'
       },
       desc: {
-        a: 'AUTOCHAIN is an open source, publicly maintained decentralized computing system based on blockchain technology. It provides a decentralized Turing-complete virtual machine to support the operation of smart contracts.',
-        b: 'The bottom layer of the AUTOCHAIN is the blockchain infrastructure layer. The technical solution is to ramify the Ethereum source code, and further modifications are made on this basis, including the generation of dynamic zone protocols, dynamic block security protocols, and data group embedding protocol, chain-level hierarchical archiving protocol, concurrent chain-level communication protocol, and distributed cross-chain synchronization communication protocol. Based on these protocols, the data dynamically changes with time, achieving higher performance than Ethereum on the basis of ensuring security. Meanwhile, there is an smart contract abstraction layer above the infrastructure layer, based on the PoW consensus mechanism, carrying out technical abstraction on different application scenarios of the automobile industry chain, and building a standardized and modular smart contract template for further combination and customization, for further combination, customization of smart contract for different industries,enterprises and application scenarios. On the basis of this, a general interface protocol of block chain is built, which is used to participate in the users of the automobile.',
+        a: 'The bottom layer of the AUTOCHAIN is the blockchain infrastructure layer. The technical solution is to ramify the Ethereum source code, and further modifications are made on this basis, including the generation of dynamic zone protocols, dynamic block security protocols, and data group embedding protocol, chain-level hierarchical archiving protocol, concurrent chain-level communication protocol, and distributed cross-chain synchronization communication protocol. Based on these protocols, the data dynamically changes with time, achieving higher performance than Ethereum on the basis of ensuring security. Meanwhile, there is an smart contract abstraction layer above the infrastructure layer, based on the PoW consensus mechanism, carrying out technical abstraction on different application scenarios of the automobile industry chain, and building a standardized and modular smart contract template for further combination and customization, for further combination, customization of smart contract for different industries,enterprises and application scenarios. On the basis of this, a general interface protocol of block chain is built, which is used to participate in the users of the automobile.',
+        b: 'AUTOCHAIN is an open source, publicly maintained decentralized computing system based on blockchain technology. It provides a decentralized Turing-complete virtual machine to support the operation of smart contracts.',
         c: 'AUTOCHAIN is a chain of automotive industry alliances based on blockchain technology. We will develop a system that uses PoW workload proof mechanisms to achieve consensus among nodes and use DAG directed loopless guarantee systems to ensure the high throughput. Combined with the characteristics of the automobile industry, we will build distributed database storage and off-chain transaction platform, so as to complete the offline definition of rights, registration, and risk control of vehicle assets, and standardize the standards for each link. Offline rights and risk control data will be stored on distributed storage file systems such as IPFS or SC, and then we will perform on-chain mapping and issuing coins. Vehicle asset holders can apply for the issuance of their own vehicle assets through the trading platform, which can be approved by the platform.'
       }
     },
@@ -113,19 +113,19 @@ module.exports = {
       subTitle: 'The founding team',
       child: {
         a: {
-          tit: '奥巴马',
-          desc: '卖大锅的',
-          identity: '亚太区主席'
+          tit: 'Tim Matheoda',
+          desc: 'As co-founder of fiked capital',
+          identity: 'Autochain CEO'
         },
         b: {
-          tit: '奥巴马',
-          desc: '卖大锅的',
-          identity: '亚太区主席'
+          tit: 'Kamilla autochain',
+          desc: 'Autochain COO',
+          identity: ''
         },
         c: {
-          tit: '奥巴马',
-          desc: '卖大锅的',
-          identity: '亚太区主席'
+          tit: 'Janne Mustonen',
+          desc: 'Autochain CTO',
+          identity: ''
         }
       }
     },
@@ -149,8 +149,8 @@ module.exports = {
         },
         d: {
           tit: '马晨译',
-          desc: '',
-          identity: '车董会创始人'
+          desc: '车董会创始人',
+          identity: ''
         },
         e: {
           tit: '刘朝阳',
@@ -159,18 +159,18 @@ module.exports = {
         },
         f: {
           tit: '刘晓科',
-          desc: '',
-          identity: '易车高级副总裁'
+          desc: '易车高级副总裁',
+          identity: ''
         },
         g: {
           tit: '吴世春',
-          desc: '',
-          identity: '梅花天使'
+          desc: '梅花天使',
+          identity: ''
         },
         h: {
           tit: '张东晖',
-          desc: '',
-          identity: '阿米巴资本创始合伙人'
+          desc: '阿米巴资本创始合伙人',
+          identity: ''
         }
       }
     },

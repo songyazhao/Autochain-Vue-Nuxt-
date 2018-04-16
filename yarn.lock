@@ -114,13 +114,21 @@ acorn@^5.0.0, acorn@^5.3.0, acorn@^5.4.0:
   version "5.5.0"
   resolved "http://registry.npm.taobao.org/acorn/download/acorn-5.5.0.tgz#1abb587fbf051f94e3de20e6b26ef910b1828298"
 
+acorn@^5.5.0:
+  version "5.5.3"
+  resolved "http://registry.npm.taobao.org/acorn/download/acorn-5.5.3.tgz#f473dd47e0277a08e28e9bec5aeeb04751f0b8c9"
+
 aes-decrypter@1.0.3:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/aes-decrypter/download/aes-decrypter-1.0.3.tgz#9c06b8a5435a5ad09db933f8a014afcf184cc34e"
   dependencies:
     pkcs7 "^0.2.3"
 
-ajv-keywords@^3.0.0, ajv-keywords@^3.1.0:
+ajv-keywords@^2.1.0:
+  version "2.1.1"
+  resolved "http://registry.npm.taobao.org/ajv-keywords/download/ajv-keywords-2.1.1.tgz#617997fc5f60576894c435f940d819e135b80762"
+
+ajv-keywords@^3.1.0:
   version "3.1.0"
   resolved "http://registry.npm.taobao.org/ajv-keywords/download/ajv-keywords-3.1.0.tgz#ac2b27939c543e95d2c06e7f7f5c27be4aa543be"
 
@@ -131,7 +139,7 @@ ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.0.0, ajv@^5.3.0:
+ajv@^5.0.0, ajv@^5.2.3, ajv@^5.3.0:
   version "5.5.2"
   resolved "http://registry.npm.taobao.org/ajv/download/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
@@ -140,7 +148,7 @@ ajv@^5.0.0, ajv@^5.3.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-ajv@^6.0.1, ajv@^6.1.0:
+ajv@^6.1.0:
   version "6.2.0"
   resolved "http://registry.npm.taobao.org/ajv/download/ajv-6.2.0.tgz#afac295bbaa0152449e522742e4547c1ae9328d2"
   dependencies:
@@ -1201,6 +1209,10 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
   version "1.0.30000810"
   resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000810.tgz#47585fffce0e9f3593a6feea4673b945424351d9"
 
+caniuse-lite@^1.0.30000808:
+  version "1.0.30000817"
+  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000817.tgz#e993c380eb4bfe76a2aed4223f841c02d6e0d832"
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "http://registry.npm.taobao.org/caseless/download/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -1238,7 +1250,7 @@ check-types@^7.3.0:
   version "7.3.0"
   resolved "http://registry.npm.taobao.org/check-types/download/check-types-7.3.0.tgz#468f571a4435c24248f5fd0cb0e8d87c3c341e7d"
 
-chokidar@^2.0.0, chokidar@^2.0.2:
+chokidar@^2.0.1, chokidar@^2.0.2:
   version "2.0.2"
   resolved "http://registry.npm.taobao.org/chokidar/download/chokidar-2.0.2.tgz#4dc65139eeb2714977735b6a35d06e97b494dfd7"
   dependencies:
@@ -1414,13 +1426,13 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.12.x:
-  version "2.12.2"
-  resolved "http://registry.npm.taobao.org/commander/download/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
-
 commander@2.14.x, commander@^2.13.0, commander@~2.14.1:
   version "2.14.1"
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+
+commander@2.15.x:
+  version "2.15.1"
+  resolved "http://registry.npm.taobao.org/commander/download/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -1614,7 +1626,7 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "http://registry.npm.taobao.org/css-color-names/download/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
-css-hot-loader@^1.3.6:
+css-hot-loader@^1.3.7:
   version "1.3.8"
   resolved "http://registry.npm.taobao.org/css-hot-loader/download/css-hot-loader-1.3.8.tgz#edc17f9a24c8e2254c1c570e3779257489aa53f6"
   dependencies:
@@ -2096,14 +2108,15 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-friendly-formatter@^3.0.0:
-  version "3.0.0"
-  resolved "http://registry.npm.taobao.org/eslint-friendly-formatter/download/eslint-friendly-formatter-3.0.0.tgz#278874435a6c46ec1d94fa0b1ff494e30ef04290"
+eslint-friendly-formatter@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/eslint-friendly-formatter/download/eslint-friendly-formatter-4.0.0.tgz#f9b8962c15a23eefa85399bbea62ffe167439fd5"
   dependencies:
-    chalk "^1.0.0"
+    chalk "^2.0.1"
     coalescy "1.0.0"
     extend "^3.0.0"
     minimist "^1.2.0"
+    strip-ansi "^4.0.0"
     text-table "^0.2.0"
 
 eslint-loader@^2.0.0:
@@ -2116,9 +2129,9 @@ eslint-loader@^2.0.0:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-plugin-vue@^4.3.0:
-  version "4.3.0"
-  resolved "http://registry.npm.taobao.org/eslint-plugin-vue/download/eslint-plugin-vue-4.3.0.tgz#478c6267269dbaa20f6e8b2cfae7a0ccc98c1d72"
+eslint-plugin-vue@^4.4.0:
+  version "4.4.0"
+  resolved "http://registry.npm.taobao.org/eslint-plugin-vue/download/eslint-plugin-vue-4.4.0.tgz#bfc3a71f76bd0e139313e4425a807257ae42f768"
   dependencies:
     vue-eslint-parser "^2.0.3"
 
@@ -2133,9 +2146,9 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/eslint-visitor-keys/download/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.18.1:
-  version "4.18.1"
-  resolved "http://registry.npm.taobao.org/eslint/download/eslint-4.18.1.tgz#b9138440cb1e98b2f44a0d578c6ecf8eae6150b0"
+eslint@^4.19.1:
+  version "4.19.1"
+  resolved "http://registry.npm.taobao.org/eslint/download/eslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
   dependencies:
     ajv "^5.3.0"
     babel-code-frame "^6.22.0"
@@ -2146,7 +2159,7 @@ eslint@^4.18.1:
     doctrine "^2.1.0"
     eslint-scope "^3.7.1"
     eslint-visitor-keys "^1.0.0"
-    espree "^3.5.2"
+    espree "^3.5.4"
     esquery "^1.0.0"
     esutils "^2.0.2"
     file-entry-cache "^2.0.0"
@@ -2168,11 +2181,12 @@ eslint@^4.18.1:
     path-is-inside "^1.0.2"
     pluralize "^7.0.0"
     progress "^2.0.0"
+    regexpp "^1.0.1"
     require-uncached "^1.0.3"
     semver "^5.3.0"
     strip-ansi "^4.0.0"
     strip-json-comments "~2.0.1"
-    table "^4.0.1"
+    table "4.0.2"
     text-table "~0.2.0"
 
 espree@^3.5.2:
@@ -2180,6 +2194,13 @@ espree@^3.5.2:
   resolved "http://registry.npm.taobao.org/espree/download/espree-3.5.3.tgz#931e0af64e7fbbed26b050a29daad1fc64799fa6"
   dependencies:
     acorn "^5.4.0"
+    acorn-jsx "^3.0.0"
+
+espree@^3.5.4:
+  version "3.5.4"
+  resolved "http://registry.npm.taobao.org/espree/download/espree-3.5.4.tgz#b0f447187c8a8bed944b815a660bddf5deb5d1a7"
+  dependencies:
+    acorn "^5.5.0"
     acorn-jsx "^3.0.0"
 
 esprima@^2.6.0:
@@ -2799,19 +2820,6 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "http://registry.npm.taobao.org/html-entities/download/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
-html-minifier@3.5.8:
-  version "3.5.8"
-  resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.5.8.tgz#5ccdb1f73a0d654e6090147511f6e6b2ee312700"
-  dependencies:
-    camel-case "3.0.x"
-    clean-css "4.1.x"
-    commander "2.12.x"
-    he "1.1.x"
-    ncname "1.0.x"
-    param-case "2.1.x"
-    relateurl "0.2.x"
-    uglify-js "3.3.x"
-
 html-minifier@^3.2.3:
   version "3.5.9"
   resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.5.9.tgz#74424014b872598d4bb0e20ac420926ec61024b6"
@@ -2819,6 +2827,19 @@ html-minifier@^3.2.3:
     camel-case "3.0.x"
     clean-css "4.1.x"
     commander "2.14.x"
+    he "1.1.x"
+    ncname "1.0.x"
+    param-case "2.1.x"
+    relateurl "0.2.x"
+    uglify-js "3.3.x"
+
+html-minifier@^3.5.9:
+  version "3.5.12"
+  resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.5.12.tgz#6bfad4d0327f5b8d2b62f5854654ac3703b9b031"
+  dependencies:
+    camel-case "3.0.x"
+    clean-css "4.1.x"
+    commander "2.15.x"
     he "1.1.x"
     ncname "1.0.x"
     param-case "2.1.x"
@@ -3058,6 +3079,16 @@ is-directory@^0.3.1:
   version "0.3.1"
   resolved "http://registry.npm.taobao.org/is-directory/download/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
 
+is-dom-node-list@^1.2.1:
+  version "1.2.1"
+  resolved "http://registry.npm.taobao.org/is-dom-node-list/download/is-dom-node-list-1.2.1.tgz#141ded0c66de759d0976800d21370bb908f2950f"
+  dependencies:
+    is-dom-node "^1.0.4"
+
+is-dom-node@^1.0.4:
+  version "1.0.4"
+  resolved "http://registry.npm.taobao.org/is-dom-node/download/is-dom-node-1.0.4.tgz#abb18af7133f1e687610cfeb274da1ced342f1c5"
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "http://registry.npm.taobao.org/is-extendable/download/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -3206,10 +3237,6 @@ js-base64@^2.1.9:
   version "2.4.3"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
 
-js-cookie@^2.2.0:
-  version "2.2.0"
-  resolved "http://registry.npm.taobao.org/js-cookie/download/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
-
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/js-tokens/download/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -3313,13 +3340,13 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "http://registry.npm.taobao.org/kind-of/download/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-launch-editor-middleware@^2.2.0:
+launch-editor-middleware@^2.2.1:
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/launch-editor-middleware/download/launch-editor-middleware-2.2.1.tgz#e14b07e6c7154b0a4b86a0fd345784e45804c157"
   dependencies:
     launch-editor "^2.2.1"
 
-launch-editor@^2.0.0, launch-editor@^2.2.1:
+launch-editor@^2.2.1:
   version "2.2.1"
   resolved "http://registry.npm.taobao.org/launch-editor/download/launch-editor-2.2.1.tgz#871b5a3ee39d6680fcc26d37930b6eeda89db0ca"
   dependencies:
@@ -3611,6 +3638,10 @@ minimist@1.2.0, minimist@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/minimist/download/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
+miniraf@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/miniraf/download/miniraf-1.0.0.tgz#5d88e108bbdcb55b4a2ff3da337f24a13a3377e1"
+
 mississippi@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/mississippi/download/mississippi-2.0.0.tgz#3442a508fafc28500486feea99409676e4ee5a6f"
@@ -3830,9 +3861,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/number-is-nan/download/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@^1.3.0:
-  version "1.3.0"
-  resolved "http://registry.npm.taobao.org/nuxt/download/nuxt-1.3.0.tgz#a862818aa39e8a8c2b60ede73cba4ff8628f1a5d"
+nuxt@^1.4.0:
+  version "1.4.0"
+  resolved "http://registry.npm.taobao.org/nuxt/download/nuxt-1.4.0.tgz#66df9ede68daf2ef4cfbcc329da7dda0003e0420"
   dependencies:
     "@nuxtjs/youch" "^4.2.3"
     ansi-html "^0.0.7"
@@ -3840,13 +3871,13 @@ nuxt@^1.3.0:
     babel-core "^6.26.0"
     babel-loader "^7.1.2"
     babel-preset-vue-app "^2.0.0"
-    caniuse-lite "^1.0.30000792"
-    chalk "^2.3.0"
-    chokidar "^2.0.0"
+    caniuse-lite "^1.0.30000808"
+    chalk "^2.3.1"
+    chokidar "^2.0.1"
     clone "^2.1.1"
     compression "^1.7.1"
     connect "^3.6.5"
-    css-hot-loader "^1.3.6"
+    css-hot-loader "^1.3.7"
     css-loader "^0.28.9"
     debug "^3.1.0"
     es6-promise "^4.2.4"
@@ -3858,26 +3889,26 @@ nuxt@^1.3.0:
     fs-extra "^5.0.0"
     glob "^7.1.2"
     hash-sum "^1.0.2"
-    html-minifier "3.5.8"
+    html-minifier "^3.5.9"
     html-webpack-plugin "^2.30.1"
-    launch-editor "^2.0.0"
-    launch-editor-middleware "^2.2.0"
-    lodash "^4.17.4"
+    launch-editor "^2.2.1"
+    launch-editor-middleware "^2.2.1"
+    lodash "^4.17.5"
     lru-cache "^4.1.1"
     memory-fs "^0.4.1"
     minimist "^1.2.0"
     opencollective "^1.0.3"
-    postcss "^6.0.16"
+    postcss "^6.0.17"
     postcss-cssnext "^3.1.0"
-    postcss-import "^11.0.0"
+    postcss-import "^11.1.0"
     postcss-import-resolver "^1.1.0"
-    postcss-loader "^2.0.10"
+    postcss-loader "^2.1.0"
     postcss-url "^7.3.0"
     pretty-error "^2.1.1"
     progress-bar-webpack-plugin "^1.10.0"
     semver "^5.5.0"
     serialize-javascript "^1.4.0"
-    serve-static "^1.13.1"
+    serve-static "^1.13.2"
     server-destroy "^1.0.1"
     source-map "^0.7.0"
     style-resources-loader "^1.0.0"
@@ -3886,14 +3917,14 @@ nuxt@^1.3.0:
     url-loader "^0.6.2"
     vue "^2.5.13"
     vue-loader "13.7.0"
-    vue-meta "^1.4.2"
+    vue-meta "^1.4.3"
     vue-router "^3.0.1"
     vue-server-renderer "^2.5.13"
     vue-template-compiler "^2.5.13"
     vuex "^3.0.1"
-    webpack "^3.10.0"
-    webpack-bundle-analyzer "^2.9.2"
-    webpack-dev-middleware "^2.0.4"
+    webpack "^3.11.0"
+    webpack-bundle-analyzer "^2.10.0"
+    webpack-dev-middleware "^2.0.5"
     webpack-hot-middleware "^2.21.0"
     webpack-node-externals "^1.6.0"
 
@@ -4443,7 +4474,7 @@ postcss-import-resolver@^1.1.0:
   dependencies:
     enhanced-resolve "^3.4.1"
 
-postcss-import@^11.0.0:
+postcss-import@^11.1.0:
   version "11.1.0"
   resolved "http://registry.npm.taobao.org/postcss-import/download/postcss-import-11.1.0.tgz#55c9362c9192994ec68865d224419df1db2981f0"
   dependencies:
@@ -4482,9 +4513,9 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.10:
-  version "2.1.1"
-  resolved "http://registry.npm.taobao.org/postcss-loader/download/postcss-loader-2.1.1.tgz#208935af3b1d65e1abb1a870a912dd12e7b36895"
+postcss-loader@^2.1.0:
+  version "2.1.3"
+  resolved "http://registry.npm.taobao.org/postcss-loader/download/postcss-loader-2.1.3.tgz#eb210da734e475a244f76ccd61f9860f5bb3ee09"
   dependencies:
     loader-utils "^1.1.0"
     postcss "^6.0.0"
@@ -4727,7 +4758,7 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.16, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
+postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
   version "6.0.19"
   resolved "http://registry.npm.taobao.org/postcss/download/postcss-6.0.19.tgz#76a78386f670b9d9494a655bf23ac012effd1555"
   dependencies:
@@ -4999,6 +5030,10 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
+regexpp@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/regexpp/download/regexpp-1.0.1.tgz#d857c3a741dce075c2848dcb019a0a975b190d43"
+
 regexpu-core@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/regexpu-core/download/regexpu-core-1.0.0.tgz#86a763f58ee4d7c2f6b102e4764050de7ed90c6b"
@@ -5028,6 +5063,10 @@ regjsparser@^0.1.4:
 relateurl@0.2.x:
   version "0.2.7"
   resolved "http://registry.npm.taobao.org/relateurl/download/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
+
+rematrix@0.2.2:
+  version "0.2.2"
+  resolved "http://registry.npm.taobao.org/rematrix/download/rematrix-0.2.2.tgz#c96a050260782db9908904885991256e23beda5d"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -5224,6 +5263,18 @@ schema-utils@^0.4.0, schema-utils@^0.4.2, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
+scrollreveal@^3.3.6:
+  version "3.4.0"
+  resolved "http://registry.npm.taobao.org/scrollreveal/download/scrollreveal-3.4.0.tgz#77ce77b383d1883f2aafebdfc6f17a105718a780"
+
+scrollreveal@^4.0.0-beta.26:
+  version "4.0.0-beta.26"
+  resolved "http://registry.npm.taobao.org/scrollreveal/download/scrollreveal-4.0.0-beta.26.tgz#a1c40283d6bc4ab09ff2ce797ed5e5a80cca5e54"
+  dependencies:
+    miniraf "^1.0.0"
+    rematrix "0.2.2"
+    tealight "0.3.0"
+
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.5.0:
   version "5.5.0"
   resolved "http://registry.npm.taobao.org/semver/download/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
@@ -5277,7 +5328,7 @@ serve-static@1.13.1:
     parseurl "~1.3.2"
     send "0.16.1"
 
-serve-static@^1.13.1:
+serve-static@^1.13.2:
   version "1.13.2"
   resolved "http://registry.npm.taobao.org/serve-static/download/serve-static-1.13.2.tgz#095e8472fd5b46237db50ce486a43f4b86c6cec1"
   dependencies:
@@ -5695,12 +5746,12 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-table@^4.0.1:
-  version "4.0.3"
-  resolved "http://registry.npm.taobao.org/table/download/table-4.0.3.tgz#00b5e2b602f1794b9acaf9ca908a76386a7813bc"
+table@4.0.2:
+  version "4.0.2"
+  resolved "http://registry.npm.taobao.org/table/download/table-4.0.2.tgz#a33447375391e766ad34d3486e6e2aedc84d2e36"
   dependencies:
-    ajv "^6.0.1"
-    ajv-keywords "^3.0.0"
+    ajv "^5.2.3"
+    ajv-keywords "^2.1.0"
     chalk "^2.1.0"
     lodash "^4.17.4"
     slice-ansi "1.0.0"
@@ -5730,6 +5781,13 @@ tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+tealight@0.3.0:
+  version "0.3.0"
+  resolved "http://registry.npm.taobao.org/tealight/download/tealight-0.3.0.tgz#92909b07f898a654554dde761f664448571e0a1b"
+  dependencies:
+    is-dom-node "^1.0.4"
+    is-dom-node-list "^1.2.1"
 
 text-table@^0.2.0, text-table@~0.2.0:
   version "0.2.0"
@@ -6142,9 +6200,9 @@ vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
 
-vue-i18n@^7.4.2:
-  version "7.4.2"
-  resolved "http://registry.npm.taobao.org/vue-i18n/download/vue-i18n-7.4.2.tgz#ef954f80898bb3609f132f77d51a7053379e03b2"
+vue-i18n@^7.6.0:
+  version "7.6.0"
+  resolved "http://registry.npm.taobao.org/vue-i18n/download/vue-i18n-7.6.0.tgz#8745807756f6ca5090fd85629e9cab99b1c6e442"
 
 vue-loader@13.7.0:
   version "13.7.0"
@@ -6164,9 +6222,9 @@ vue-loader@13.7.0:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
-vue-meta@^1.4.2:
-  version "1.4.3"
-  resolved "http://registry.npm.taobao.org/vue-meta/download/vue-meta-1.4.3.tgz#ad0e618c0152617ec7497d9edb117e1a9d70cfc9"
+vue-meta@^1.4.3:
+  version "1.5.0"
+  resolved "http://registry.npm.taobao.org/vue-meta/download/vue-meta-1.5.0.tgz#02a9f166a1e87763a87bfd47431122ed575bcdde"
   dependencies:
     deepmerge "^2.0.0"
     lodash.isplainobject "^4.0.6"
@@ -6176,9 +6234,15 @@ vue-router@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
-vue-scrollto@^2.9.0:
-  version "2.9.0"
-  resolved "http://registry.npm.taobao.org/vue-scrollto/download/vue-scrollto-2.9.0.tgz#489ce4674f871ea47547178b1df793302c6aec23"
+vue-scroll-reveal@^1.0.7:
+  version "1.0.7"
+  resolved "http://registry.npm.taobao.org/vue-scroll-reveal/download/vue-scroll-reveal-1.0.7.tgz#7782dc46494ed6637c465446cc47e15333e355e6"
+  dependencies:
+    scrollreveal "^3.3.6"
+
+vue-scrollto@^2.11.0:
+  version "2.11.0"
+  resolved "http://registry.npm.taobao.org/vue-scrollto/download/vue-scrollto-2.11.0.tgz#0657f127faded60a71fbcc841f393279a49aed55"
   dependencies:
     bezier-easing "^2.0.3"
 
@@ -6239,9 +6303,9 @@ watchpack@^1.4.0:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
-webpack-bundle-analyzer@^2.9.2:
-  version "2.11.0"
-  resolved "http://registry.npm.taobao.org/webpack-bundle-analyzer/download/webpack-bundle-analyzer-2.11.0.tgz#ed6f6ab59f5b341ffb60849ca707a7fe841c4f86"
+webpack-bundle-analyzer@^2.10.0:
+  version "2.11.1"
+  resolved "http://registry.npm.taobao.org/webpack-bundle-analyzer/download/webpack-bundle-analyzer-2.11.1.tgz#b9fbfb6a32c0a8c1c3237223e90890796b950ab9"
   dependencies:
     acorn "^5.3.0"
     bfj-node4 "^5.2.0"
@@ -6256,7 +6320,7 @@ webpack-bundle-analyzer@^2.9.2:
     opener "^1.4.3"
     ws "^4.0.0"
 
-webpack-dev-middleware@^2.0.4:
+webpack-dev-middleware@^2.0.5:
   version "2.0.6"
   resolved "http://registry.npm.taobao.org/webpack-dev-middleware/download/webpack-dev-middleware-2.0.6.tgz#a51692801e8310844ef3e3790e1eacfe52326fd4"
   dependencies:
@@ -6297,7 +6361,7 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^3.10.0:
+webpack@^3.11.0:
   version "3.11.0"
   resolved "http://registry.npm.taobao.org/webpack/download/webpack-3.11.0.tgz#77da451b1d7b4b117adaf41a1a93b5742f24d894"
   dependencies:

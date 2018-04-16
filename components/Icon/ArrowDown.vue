@@ -10,6 +10,7 @@
   position: absolute;
   top: -25%;
   left: -25%;
+  fill: white;
 }
 </style>
 
@@ -30,7 +31,7 @@ export default {
   props: {
     color: {
       type: String,
-      default: 'white'
+      default: ''
     }
   }
 }

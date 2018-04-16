@@ -1,20 +1,24 @@
-@import './tag-rewrite.styl';
 @import './_const.styl';
 @import './_util.styl';
+@import './tag-rewrite.styl';
+@import './media.styl';
+
+html {
+  background-image: url('../assets/v2/krisel.png'); // background-position-y: 854px;
+  background-size: 256px 256px;
+  font-size: 62.5%;
+}
 
 body {
   color: white;
-  font-size: 18px;
-  min-width: 1024px;
   font-family: Microsoft Yahei, Avenir, Hiragino Sans GB, Microsoft Sans Serif,
   WenQuanYi Micro Hei, sans-serif;
   font-weight: 100;
   line-height: 1.5;
   position: relative;
-  background-image: url('../assets/侧边栏-tp@2x.png'), url('../assets/body-background.png'); // background-repeat: no-repeat;
-  background-position-y: 854px;
-  background-size: 100%;
-  transition: background-position-y .75s ease;
+  background-image: url('../assets/侧边栏-tp@2x.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
 }
 
 .container {
@@ -24,22 +28,28 @@ body {
 .module {
   initSize();
   &-title {
-    margin-top: 200px;
     text-align: center;
     h2 {
-      font-weight: 100;
-      font-size: 40px;
-      line-height: 40px;
+      font-weight: 400;
+      font-size: 2.225rem;
+      line-height: 2.225rem;
       display: inline-block;
 
       &:after {
         content: '';
         display: block;
-        width: 100%;
+        width: 60%;
         height: 4px;
         background-color: main-color;
-        margin-top: 8px;
+        margin-top: .6em;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 1.6em;
 }

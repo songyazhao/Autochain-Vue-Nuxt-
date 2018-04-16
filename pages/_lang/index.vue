@@ -10,7 +10,7 @@ Description 基于Vue + Nuxt开发的静态站点
     <Home/>
     <BusinessModel/>
     <TechnologySuperiority/>
-    <Token ref="token"/>
+    <Token/>
     <TeamIntroduction/>
     <Footer/>
   </section>
@@ -42,7 +42,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['locale'])
+    ...mapState(['locales', 'locale'])
   },
 
   mounted() {
@@ -54,7 +54,7 @@ export default {
       let localLang = (navigator.language || navigator.browserLanguage).toLowerCase()
 
       // 国外
-      if (this.$store.state.locales.indexOf(localLang) === -1) {
+      if (this.locales.indexOf(localLang) === -1) {
         localLang = 'en'
       }
 
@@ -63,78 +63,15 @@ export default {
         return this.$router.replace(`/${localLang}`)
       }
 
-      if (this.isMobile()) {
-        import('~/styles/mobile.styl')
-        if (this.isIOS()) {
-          import('~/styles/mobile-ios.styl')
-        }
-      } else {
-        this.backgroundRoll()
-      }
+      this.watchWindowResize()
     },
 
-    isIOS() {
-      return (/iPhone|iPad|iPod/).test(navigator.userAgent)
-    },
-
-    isMobile() {
-      return (/Android|iPhone|iPad|iPod|Symbian/).test(navigator.userAgent)
-    },
-
-    backgroundRoll() {
-      const body = document.getElementsByTagName('body')[0]
-      const basePositionY = this.getPositionY(body)
-      const baseDiff = 5 // 背景偏移的落差值
-
-      this.onScroll((direction, beforeScrollTop, afterScrollTop) => {
-        let diff = direction === 'up' ? baseDiff : -baseDiff
-        let y = this.getPositionY(body) + diff
-        y = afterScrollTop <= 10 ? basePositionY : y // 快要滚动到顶部的时候 重置回basePositionY
-
-        body.style.backgroundPositionY = `${y}px`
+    // 监听窗体缩放
+    watchWindowResize() {
+      this.$store.commit('SET_IS', window.innerWidth < 767)
+      window.addEventListener('resize', () => {
+        this.$store.commit('SET_IS', window.innerWidth < 767)
       })
-    },
-
-    onScroll(fn = () => { }) {
-      let beforeScrollTop = this.getScrollPosition().top
-
-      window.addEventListener('scroll', () => {
-        let afterScrollTop = this.getScrollPosition().top
-        let delta = afterScrollTop - beforeScrollTop
-        if (delta === 0) return false
-
-        fn(delta > 0 ? 'down' : 'up', beforeScrollTop, afterScrollTop)
-        beforeScrollTop = afterScrollTop
-      }, false)
-    },
-
-    getPositionY(el) {
-      let y = ''
-      if (el.style.backgroundPositionY !== '') {
-        y = el.style.backgroundPositionY
-      } else {
-        y = getComputedStyle(el, null)['backgroundPositionY']
-      }
-      return ~~y.match(/\-\d+|\d+/)[0]
-    },
-
-    getScrollPosition() {
-      if (window.pageYOffset != null) {
-        return {
-          left: window.pageXOffset,
-          top: window.pageYOffset
-        }
-      } else if (document.compatMode == 'CSS1Compat') {
-        return {
-          left: document.documentElement.scrollLeft,
-          top: document.documentElement.scrollTop
-        }
-      }
-
-      return {
-        left: document.body.scrollLeft,
-        top: document.body.scrollTop
-      }
     }
   }
 }

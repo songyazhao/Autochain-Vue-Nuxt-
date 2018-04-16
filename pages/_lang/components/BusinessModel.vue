@@ -3,12 +3,36 @@
 @import '../../../styles/_util.styl';
 
 .business-model {
+  font-size: 1.5em;
+  min-height: 48vw;
+  // min-height: 650px;
+  background: url('../../../assets/v2/星空.png') no-repeat center center;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .module-title {
+    margin-top: 200px;
+    text-align: left;
+
+    h2::after {
+      width: 78%;
+      margin-left: 0;
+    }
+  }
+
+  .starry-sky {
+    position: absolute;
+    top: 18%;
+    transform: rotateY(-180deg);
+  }
+
   &-autochain {
     width: w = 405px;
     height: w;
-    margin: 60px auto 0;
+    margin: 3em auto 0;
     background: url('../../../assets/商业模式-t@2x.png') no-repeat center center;
-    background-size: w w;
+    background-size: 100% 100%;
     position: relative;
     text-align: center;
     transitionBeforeBig();
@@ -16,9 +40,9 @@
     &:before {
       content: attr(inner-text);
       display: inline-block;
-      width: 270px;
+      width: 7em;
       text-align: center;
-      font-size: 34px;
+      font-size: 2rem;
       word-break: keep-all;
       line-height: 38px;
       position: relative;
@@ -28,131 +52,114 @@
 
     [class^='text-'] {
       position: absolute;
-      font-size: 26px;
+      white-space: nowrap;
+    }
+
+    .text-1,
+    .text-5 {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .text-1 {
-      left: 40%;
-      top: -44px;
+      top: -2.2em;
     }
 
-    .text-2 {
-      right: -40px;
-      top: 30px;
+    .text-2,
+    .text-8 {
+      top: 5%;
+    }
+
+    .text-2,
+    .text-4 {
+      left: 100%;
+      transform: translateX(-1em);
+    }
+
+    .text-3,
+    .text-7 {
+      top: 50%;
     }
 
     .text-3 {
-      right: -124px;
-      top: 45%;
+      left: 100%;
+      transform: translate(1em, -50%);
     }
 
-    .text-4 {
-      right: -66px;
-      bottom: 27px;
+    .text-4,
+    .text-6 {
+      bottom: 5%;
     }
 
     .text-5 {
-      left: 33%;
-      bottom: -42px;
-    }
-
-    .text-6 {
-      left: -66px;
-      bottom: 27px;
+      bottom: -2.2em;
     }
 
     .text-7 {
-      left: -43px;
-      top: 45%;
+      right: calc(100% + 0.5em);
+      transform: translate(-50%, -50%);
     }
 
+    .text-6,
     .text-8 {
-      left: -40px;
-      top: 30px;
+      right: 100%;
+      transform: translateX(1em);
     }
   }
 
   &-desc {
-    margin-top: 70px;
+    color: main-color;
+    margin-top: 6em;
     text-align: center;
   }
+}
 
-  &.en {
-    .text-1 {
-      left: 134px;
-      top: -44px;
-    }
-
-    .text-2 {
-      right: -181px;
-      top: 30px;
-    }
-
-    .text-3 {
-      right: -295px;
-      top: 41%;
-      width: 282px;
-    }
-
-    .text-4 {
-      right: -106px;
-      bottom: 27px;
-    }
-
-    .text-5 {
-      left: 25%;
-      bottom: -42px;
-    }
-
-    .text-6 {
-      left: -48%;
-      bottom: 27px;
-    }
-
-    .text-8 {
-      left: -161px;
-      top: 30px;
-    }
+.en {
+  .business-model-autochain {
   }
 }
 </style>
 
 <template>
-  <div class="module business-model" id="b" :class="{ en: locale === 'en' }">
+<div class="business-model">
+  <StarrySky class="starry-sky"/>
+  <div class="module" id="b" :class="{ en: locale === 'en' }">
     <div class="module-title">
       <h2>{{ $t('BM.title') }}</h2>
     </div>
-    <ul class="business-model-autochain" :class="{ skip: isMobile }" :inner-text="$t('home.autochain.innerText')">
+    <ul class="business-model-autochain" :inner-text="$t('home.autochain.innerText')">
       <li
         :class="`text-${index + 1}`"
         v-for="(item, key, index) in polygon"
-        :key="key">
-        {{ $t(`BM.polygon.${key}`) }}
+        :key="key"
+        v-html="$t(`BM.polygon.${key}`)">
       </li>
     </ul>
     <div class="business-model-desc">
       {{ $t('BM.desc') }}
     </div>
   </div>
+</div>
 </template>
 
 <script>
+import StarrySky from '~/components/Canvas/StarrySky'
 import { mapState } from 'vuex'
 const { polygon } = require('~/locales/zh-cn').BM
 
 export default {
   name: 'BusinessModel',
+
+  components: { StarrySky },
+
   computed: {
     ...mapState(['locale'])
   },
+
   data() {
     return {
-      polygon,
-      isMobile: false
+      polygon
     }
-  },
-  mounted() {
-    this.isMobile = this.$parent.isMobile()
   }
 }
 </script>

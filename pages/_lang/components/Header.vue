@@ -3,7 +3,6 @@
 
 header {
   width: 100%;
-  min-width: 1200px;
   background: blackback;
   position: fixed;
   top: 0;
@@ -23,12 +22,20 @@ header {
     margin-top: -29px;
   }
 
+  .navbar-toggle {
+    display: none;
+  }
+
   .nav-item {
     min-width: 463px;
     height: 100%;
     position: absolute;
     z-index: 2;
     right: length - 22px;
+
+    @media (min-width: 767px) {
+      display: block !important;
+    }
 
     li {
       width: auto;
@@ -112,7 +119,7 @@ header {
     position: absolute;
     top: 100%;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #333333;
     left: -20px;
     right: -20px;
 
@@ -131,8 +138,6 @@ header {
 }
 
 header.en {
-  min-width: 1375px;
-
   #nav .nav-item li {
     margin-left: 11px;
     margin-right: 11px;
@@ -153,13 +158,12 @@ header.en {
       <button
         type="button"
         class="navbar-toggle"
-        v-show="isMobile"
         @click.stop="isActive = !isActive">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <ul class="nav-item" v-show="!isMobile || isActive">
+      <ul class="nav-item" v-show="isActive">
         <li
           :class="{'nav-active': navActiveIndex === index}"
           v-for="(item, key, index) in nav" :key="key"
@@ -175,7 +179,7 @@ header.en {
             <div class="language-con-item" @click="handleToggle('zh-cn')">简体中文</div>
             <div class="language-con-item" @click="handleToggle('zh-hant')">繁体中文</div>
           </div>
-          <ArrowDown class="icon" :color="isMobile ? 'black' : 'white'"/>
+          <ArrowDown class="icon"/>
         </li>
       </ul>
       <div v-show="isActive"
@@ -208,8 +212,7 @@ export default {
       nav,
       navActiveIndex: 0,
       visible: false,
-      isActive: false,
-      isMobile: false
+      isActive: false
     }
   },
 
@@ -226,13 +229,8 @@ export default {
     }
   },
 
-  mounted() {
-    this.isMobile = this.$parent.isMobile()
-  },
-
   methods: {
     handleToggle(lang) {
-      this.$parent.$refs.token.clearTimer()
       this.$router.replace({
         path: `/${lang}`,
         query: {
